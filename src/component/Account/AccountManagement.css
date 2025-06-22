@@ -1,0 +1,229 @@
+.account-management {
+  padding: 2rem;
+  background-color: #f9fafb;
+}
+
+.account-management .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.account-management h2 {
+  font-size: 1.8rem;
+  color: #111827;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.account-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.account-table th, .account-table td {
+  padding: 1rem 1.25rem;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* SỬA LỖI QUAN TRỌNG: Thêm màu chữ cho ô dữ liệu */
+.account-table td {
+  color: #111827; /* Đặt màu chữ đen đậm cho các ô dữ liệu */
+  vertical-align: middle; /* Căn giữa theo chiều dọc cho đẹp hơn */
+}
+
+
+.account-table th {
+  background-color: #f3f4f6;
+  color: #374151;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+}
+
+.account-table tr:last-child td {
+    border-bottom: none;
+}
+
+.account-table tr:hover {
+  background-color: #f9fafb;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+/* --- Badges and Status --- */
+.role-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background-color: #e5e7eb; /* Màu nền xám nhạt mặc định */
+  color: #374151; /* Màu chữ đậm mặc định */
+}
+
+.role-admin { 
+  background-color: #ef4444; 
+  color: #fff;
+}
+.role-user { 
+  background-color: #3b82f6; 
+  color: #fff;
+}
+
+
+.status-active, .status-inactive {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-weight: 500;
+}
+.status-active::before, .status-inactive::before {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+.status-active { color: #15803d; background-color: #dcfce7; }
+.status-active::before { background-color: #22c55e; }
+.status-inactive { color: #b91c1c; background-color: #fee2e2; }
+.status-inactive::before { background-color: #ef4444; }
+
+
+/* --- Button Styles --- */
+.btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+.btn-details {
+    background-color: #e5e7eb;
+    color: #374151;
+}
+.btn-details:hover {
+    background-color: #d1d5db;
+}
+.btn-secondary {
+    background-color: #6b7280;
+    color: white;
+}
+.btn-secondary:hover {
+    background-color: #4b5563;
+}
+
+
+/* --- Modal Styles --- */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  max-width: 500px;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.modal-header h3 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.modal-close-btn {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #9ca3af;
+  padding: 0;
+  line-height: 1;
+}
+.modal-close-btn:hover {
+    color: #111827;
+}
+
+.modal-body p {
+    margin: 0.5rem 0;
+    color: #4b5563;
+}
+.modal-body p strong {
+    color: #111827;
+    min-width: 150px;
+    display: inline-block;
+}
+.modal-body hr {
+    border: none;
+    border-top: 1px solid #e5e7eb;
+    margin: 1rem 0;
+}
+
+.modal-footer {
+    text-align: right;
+    border-top: 1px solid #e5e7eb;
+    padding-top: 1rem;
+    margin-top: 1.5rem;
+}
+
+.text-success { color: #16a34a; font-weight: bold; }
+.text-danger { color: #dc2626; font-weight: bold; }
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Loading and Error states */
+.loading, .error {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.1rem;
+  color: #6b7280;
+}
+.error {
+  color: #b91c1c;
+}
