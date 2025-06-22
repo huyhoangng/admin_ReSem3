@@ -1,0 +1,119 @@
+/*
+  Product Admin CSS
+  https://templatemo.com/tm-524-product-admin
+*/
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  background-color: #567086; /* Màu nền chính */
+  color: #fff;
+  margin: 0;
+}
+
+a,
+button {
+  transition: all 0.3s ease;
+  color: #fff;
+}
+
+a:hover {
+  color: #f5a623;
+  text-decoration: none;
+}
+
+
+
+
+
+.tm-navbar {
+  background-color: #567086;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #435c70;
+}
+
+/* TOP NAVBAR */
+.navbar {
+  background-color: #394d5e !important;
+  border: none;
+}
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.nav-link {
+    color: #fff !important;
+}
+.nav-link.active, .nav-link:hover {
+    color: #f5a623 !important;
+}
+.navbar-nav .nav-link.active {
+    background-color: #F5A623;
+    color: #000 !important;
+    border-radius: 5px;
+}
+
+/* === CSS MỚI CHO TOP NAVBAR === */
+
+body {
+    background-color: #567086; /* Đảm bảo màu nền chính xác */
+}
+
+/* Định dạng chung cho Navbar */
+.navbar {
+    background-color: #435c70;
+    padding: 15px 30px;
+    border-radius: 10px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.navbar-brand .tm-site-title {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+/* Định dạng cho các link điều hướng */
+.navbar .nav-item {
+    text-align: center;
+}
+
+.navbar .nav-link {
+    color: #fff;
+    padding: 15px 20px;
+}
+
+/* Biểu tượng (icon) bên trên chữ */
+.navbar .nav-link .fas {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Style cho link đang được chọn (active) */
+.navbar .nav-item .nav-link.active {
+    background-color: #f5a623;
+    color: #fff;
+    border-radius: 10px;
+}
+
+/* Style khi hover chuột vào link */
+.navbar .nav-item .nav-link:hover {
+    color: #f5a623;
+}
+.navbar .nav-item .nav-link.active:hover {
+    color: #fff; /* Giữ màu trắng khi hover trên link active */
+}
+
+/* Style cho phần logout */
+.navbar-nav .nav-link.d-flex {
+    align-items: center;
+}
